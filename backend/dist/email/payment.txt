@@ -1,0 +1,37 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='http://amdal.menlhk.go.id/klh/img/logoapps.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Invoice</h1>
+<br/>
+Dear <strong>{{name}}</strong>, <br/><br/>
+Selamat permohonan anda dengan <strong>ID : {{id}}</strong> sudah dapat disetujui.  Harap segera membayar penerimaan negara bukan pajak (PNBP) sebesar <strong>Rp {{nominal}}</strong><br/>
+Ditujukan ke rekening BPN 165, Balai Besar Konservasi Sumber Daya Alam Jawa timur <br/>
+Bank Mandiri Nomor rekening 141.00981.28374<br/>
+<br/><br/><br/>
+<div style='float:right;height:80px;'>
+Terima Kasih,<br/>
+<strong>Petugas Pemungut PNBP</strong></div>
+<br/>
+<br/>
+<br/>
+</div></center></div>
+</html>

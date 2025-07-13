@@ -1,0 +1,38 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='http://amdal.menlhk.go.id/klh/img/logoapps.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Konfirmasi Persetujuan Aktivasi Lisensi</h1>
+<br/>
+Dear <strong>{{name}}</strong>, <br/><br/>
+Permintaan anda terkait aktivasi lisensi untuk KPA <strong>"{{name}}"</strong> telah {{status}}. Silahkan lanjutkan kembali proses penilaian pelaporan dokumen analisa dampak lingkungan pada sistem AMDAL NET. Berkas sertifikat yang sudah diaktivasi dan dapat dilihat pada halaman profile anda.
+<br/><br/><br/>
+<div style='float:right;height:80px;'>
+Hormat Kami,<br/>
+<strong>{{app}}</strong><br/>
+Direktorat Pencegahan Dampak Lingkungan Usaha dan Kegiatan<br/>
+Direktorat Jenderal Planologi Kehutanan dan Tata Lingkungan<br/>
+Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia<br/>
+</div>
+<br/>
+<br/>
+<br/>
+</div></center></div>

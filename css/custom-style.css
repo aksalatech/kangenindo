@@ -1,0 +1,101 @@
+.profil-hae .heading__title {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.section-mayor-minor .unordered-list {
+    margin: 30px 0;
+}
+
+.section-mayor-minor .unordered-list li{
+    font-size: 14px;
+}
+
+.section-story .action-block {
+    min-height: 500px;
+    background: #2eb872ed;
+}
+
+.section-story .action-block p{
+    color: #fff;
+}
+
+.section-dekanat .team-item--style-1 .team-item__img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.section-dekanat .team-item--style-1 .team-item__img:hover {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.rasamala-leaf-contact {
+    position: absolute;
+    bottom: -11px;
+    height: 550px;
+    opacity: 0.2;
+    width: auto;
+    left: -200px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.slide_up_down {
+    -webkit-animation: slide_up_down 1.7s ease-in-out infinite alternate both;
+    animation: slide_up_down 1.7s ease-in-out infinite alternate both; }
+  
+  /* ------- */
+@-webkit-keyframes slide_up_down {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
+    100% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px); } 
+}
+  
+@keyframes slide_up_down {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
+    100% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px); } 
+}
+
+.img--contain.slide_up_down {
+    top: 0;
+    left: 0;
+}
+
+.bg-profil-hae::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    background: url(../images/about-terrarium_layout.png);
+}
+
+.bg-grey {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.bg-grey h1, .bg-grey h2, .bg-grey p {
+    color: #fff;
+}
+
+.section-partner, .section-partner span, .section-partner h2 {
+    color: #fff !important;
+}
+
+.gallery-masonry__item img {
+    border: solid 1px #fff;
+}

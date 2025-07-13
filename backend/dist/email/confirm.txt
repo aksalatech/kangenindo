@@ -1,0 +1,52 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='http://amdal.menlhk.go.id/klh/img/logoapps.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Konfirmasi Persetujuan KA ANDAL</h1>
+<br/>
+Yth <strong>{{name}}</strong>, <br/><br/>
+Menindaklanjuti penyerahan perbaikan draf dokumen KA ANDAL <strong>{{title}}</strong> oleh {{name}}, yang telah disampaikan ke Direktorat Pencegahan Dampak Lingkungan Usaha dan Kegiatan, Kementerian Lingkungan Hidup dan Kehutanan pada tanggal {{tgl_kirim}}, serta merujuk hasil pemeriksaan uji administrasi pada surat kami terdahulu, kami sampaikan bahwa dokumen KA ANDAL rencana kegiatan {{name}} ini telah {{status}}, dan membutuhkan persetujuan akhir dari anda. 
+<br/><br/>
+<strong>Apakah anda juga menyetujui dokumen KA ANDAL ini ?</strong>
+<ul>
+	<li><a href='#'>Ya, saya setuju</a></li>
+	<li><a href='#'>Tidak, saya tidak setuju</a></li>
+</ul>
+<br/><br/>
+Demikian disampaikan konfirmasi persetujuan ini agar anda dapat segera menindaklanjuti dokumen ini.
+<br/><br/><br/>
+<div style='float:right;min-height:80px;'>
+Direktorat Pencegahan Dampak Lingkungan Usaha dan Kegiatan,<br/>
+<i>selaku</i><br/>
+Ketua Tim Teknis<br/>
+Penilai AMDAL Pusat<br/>
+<br/><br/><br/>
+<b>Ir. Ary Sudijanto, MSE</b><br/>
+NIP. 19681011 199403 1 001<br/>
+</div>
+<div style='clear:both'></div>
+<br/><br/>
+Tembusan : <br/>
+Direktur Jenderal Planologi Kehutanan dan Tata Lingkungan selaku Ketua Komisi Penilai AMDAL Pusat.
+<br/>
+<br/>
+<br/>
+</div></center></div>

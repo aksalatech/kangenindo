@@ -1,0 +1,44 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='https://sifilma.kemendagri.go.id/sam-admin/dist/img/logo.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Proses Personalisasi</h1>
+<br/>
+Dear <strong>{{name}}</strong>, <br/><br/>
+Permohonan anda dengan <strong>"{{title}}"</strong> sudah selesai diproses.  Harap segera melakukan penerimaan dokumen BAST.<br/>
+<br/><br/>
+
+<br/><br/><br/>
+<div style='float:right;height:80px;'>
+Hormat Kami,<br/>
+<strong>{{app}}</strong><br/>
+Direktorat Jenderal Kependudukan dan Catatan Sipil<br/>
+Kementerian Dalam Negeri Republik Indonesia<br/>
+</div>
+<div style='clear:both'></div>
+<br/><br/>
+<font color="red"><strong>Disclaimer</strong></font><br/>
+<strong>PENTING</strong><br/>
+<i>Informasi yang disampaikan melalui e-mail ini hanya diperuntukkan bagi pihak penerima sebagaimana dimaksud pada tujuan e-mail ini saja. E-mail ini dapat berisi informasi atau hal-hal yang secara hukum bersifat rahasia. Segala bentuk kajian, penyampaian kembali, penyebarluasan, penyediaan untuk dapat diakses, dan/atau penggunaan lain atau tindakan sejenis atas informasi ini oleh pihak baik orang maupun badan selain dari pihak yang dimaksud pada tujuan e-mail ini adalah dilarang dan dapat diancam sanksi sesuai dengan ketentuan yang berlaku. Jika karena suatu kesalahan anda menerima informasi ini harap Subdit Keamanan Informasi - Dit. FPDDK Direktorat Jenderal Kependudukan dan Pencatatan Sipil dan segera menghapus e-mail ini beserta setiap salinan dan seluruh lampirannya.</i>
+<div style='clear:both'></div>
+<br/>
+</div></center></div>
+</html>

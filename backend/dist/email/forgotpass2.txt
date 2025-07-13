@@ -1,0 +1,47 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='http://153.92.4.138/klh/img/logoapps.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Send Password</h1>
+<br/>
+Dear <strong>{{name}}</strong>, <br/><br/>
+Request pengiriman password anda telah kami proses, anda dapat melakukan akses dengan memasukkan password anda kembali :<br/>
+<table>
+	<tr>
+		<td width='110px'><strong>Username</strong></td>
+		<td>: {{username}}</td>
+	</tr>
+	<tr>
+		<td><strong>Password Anda</strong></td>
+		<td>: {{password}}</td>
+	</tr>
+</table>
+Jika anda memiliki masalah ketika login, anda dapat mengirimkan email ke <a href='mailto:{{email}}'>{{email}}</a>.<br/><br/><br/><br/><br/>
+<div style='float:right;'>
+Thank you,<br/>
+<strong>{{app}}</strong><br/>
+Direktorat Pencegahan Dampak Lingkungan Usaha dan Kegiatan<br/>
+Direktorat Jenderal Planologi Kehutanan dan Tata Lingkungan<br/>
+Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia<br/>
+</div>
+<div style='clear:both'></div>
+<br/>
+</div></center></div>

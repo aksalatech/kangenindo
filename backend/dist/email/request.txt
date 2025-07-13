@@ -1,0 +1,70 @@
+<div style='
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: #EBEBEB;
+margin:0;
+padding:8px;
+'><center>
+
+<div style='width:70%;
+background-color:white;
+border: 1px solid #CCCCCC;
+text-align: left;
+padding:10px;'>
+<center><img src='http://amdal.menlhk.go.id/klh/img/logoapps.png' width='30%'/></center><br/>
+<div style='border-top:1px solid #e4e4e4;
+padding-top:5px;
+padding-bottom:5px;'>
+</div>
+
+<h1>Account Registration</h1>
+<br/>
+Dear Administrator, <br/><br/>
+Permohonan {{type}} telah dikirimkan oleh :<br/>
+<table>
+	<tr>
+		<td width='110px'><strong>Kode</strong></td>
+		<td>: {{code}}</td>
+	</tr>
+	<tr>
+		<td width='110px'><strong>Type</strong></td>
+		<td>: {{user_type}}</td>
+	</tr>
+	<tr>
+		<td width='110px'><strong>Nama</strong></td>
+		<td>: {{user_name}}</td>
+	</tr>
+	<tr>
+		<td><strong>No. telp</strong></td>
+		<td>: {{phone}}</td>
+	</tr>
+	<tr>
+		<td><strong>Email</strong></td>
+		<td>: {{email}}</td>
+	</tr>
+</table>
+Berikut adalah data permohonan yang dikirimkan :<br/>
+<table>
+	<tr>
+		<td width='110px'><strong>Layanan</strong></td>
+		<td>: {{layanan}}</td>
+	</tr>
+	<tr>
+		<td width='110px'><strong>Wilayah</strong></td>
+		<td>: {{skw}}</td>
+	</tr>
+</table>
+Mohon agar segera diproses data permohonan {{type}} ini.<br/><br/><br/>
+<div style='float:right;'>
+Salam Hormat,<br/>
+<strong>{{app}}</strong><br/>
+Balai Besar Konservasi Sumberdaya Alam Jawa Timur<br/>
+Direktorat Jenderal Konservasi Sumber Daya Alam dan Ekosistem<br/>
+Kementerian Lingkugan Hidup dan Kehutanan<br/>
+</div>
+<div style='clear:both'></div>
+<br/>
+</div></center></div>

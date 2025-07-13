@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?php echo APP_NAME; ?> | Store Location List</title>
+  <?php include "includes/include_js_css_new.php"; ?>
+</head>
+
+<body id="bd_faqView" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+  <?php include "includes/hidden.php"; ?>
+
+  <?php require("includes/header_new.php"); ?>
+
+  <div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class="d-flex flex-row flex-column-fluid page">
+
+      <?php require("includes/navigation_new.php"); ?>
+
+      <!--begin::Wrapper-->
+      <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+
+        <?php require("includes/header-top.php"); ?>
+
+        <!--begin::Content-->
+        <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+          <!--begin::Subheader-->
+          <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+            <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+              <!--begin::Toolbar-->
+              <div class="d-flex align-items-center flex-wrap mr-2">
+                <h5 class="text-dark font-weight-bold my-1 mr-5">Store Location List</h5>
+              </div>
+              <div class="d-flex align-items-center flex-wrap">
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                  <li class="breadcrumb-item">
+                    <a href="<?php echo base_url() ?>" class="text-muted">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="<?php echo base_url() ?>Kabkot" class="text-muted"> Store Location List</a>
+                  </li>
+                </ul>
+                <!--end::Breadcrumb-->
+              </div>
+              <!--end::Toolbar-->
+            </div>
+          </div>
+          <!--end::Subheader-->
+          <!--begin::Entry-->
+          <div class="d-flex flex-column-fluid">
+            <!--begin::Container-->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <!--begin::Card-->
+                  <?php
+                  if (isset($req)) {
+                  ?> <form method="POST" action="<?php echo base_url(); ?>Store/update_type">
+                      <input type="hidden" name="catID" id="catID" value="<?php echo $req ?>">
+                      <div class="card card-custom gutter-b example example-compact">
+                        <div class="card-header d-flex justify-content-center">
+                          <h3 class="card-title">Edit Store Location</h3>
+                        </div>
+                        <!--begin::Form-->
+                        <?php
+                        if (isset($err)) {
+                        ?>
+                          <h3 class="text-center text-danger"><?php echo $err; ?></h3>
+                        <?php
+                        }
+                        ?>
+                        <div class="card-body">
+                          <?php
+                          foreach ($viewProduct as $key) {
+                          ?>
+                            <div class="form-group row">
+                              <div class="col-lg-6">
+                                <label>Store Name</label>:
+                                <div class="row">
+                                  <input type="text" class="form-control col-md-11" name="store_name" id="store_name" value="<?php echo $key->store_name; ?>" required>
+                                </div>
+                              </div>
+                               <div class="col-lg-6">
+                              <label>Store Address:</label>
+                              <div class="row">
+                                  <input type="text" class="form-control col-md-11" name="store_address" id="store_address" value="<?php echo $key->store_address; ?>" required>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Store Phone:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="store_phone" id="store_phone" value="<?php echo $key->store_phone; ?>" required>
+                              </div>
+                            </div>
+                             <div class="col-lg-6">
+                              <label>Open Hours SUN-THU:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="open_hours" id="open_hours" value="<?php echo $key->open_hours; ?>" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Open Hours FRI-SAT:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="open_hours2" id="open_hours2" value="<?php echo $key->open_hours2; ?>" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Latitude:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="latitude" id="latitude" value="<?php echo $key->latitude; ?>">
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <label>Langitude:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="longitude" id="longitude" value="<?php echo $key->longitude; ?>">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-4 checkbox-inline">
+                              <label class="checkbox checkbox-primary">
+                                <input type="checkbox" name="active" id="active" value="1" <?php echo ($key->active == 1) ? "checked" : "" ?>>
+                                <span>
+                                </span>
+                                Aktif? 
+                              </label>
+                            </div>
+                          </div>
+                          <?php
+                          }
+                          ?>
+
+                        </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-warning mr-2" name="sbmtBttn" id="sbmtBttn">Update</button>
+                          <a href="<?php echo site_url(); ?>Store" class="btn btn-secondary font-weight-bolder">Cancel</a>
+                        </div>
+                        <!--end::Form-->
+                      </div>
+                      <!--end::Card-->
+
+                    </form>
+                  <?php
+                  } else {
+                  ?>
+                    <form method="POST" action="<?php echo base_url(); ?>Store/add_type">
+                      <div class="card card-custom gutter-b example example-compact">
+                        <div class="card-header d-flex justify-content-center">
+                          <h3 class="card-title">New Store Location</h3>
+                        </div>
+                        <div class="card-body">
+                        <div class="form-group row">
+                              <div class="col-lg-6">
+                                <label>Store Name</label>:
+                                <div class="row">
+                                  <input type="text" class="form-control col-md-11"  name="store_name" id="store_name"  required>
+                                </div>
+                              </div>
+                               <div class="col-lg-6">
+                              <label>Store Address:</label>
+                              <div class="row">
+                                  <input type="text" class="form-control col-md-11"  name="store_address" id="store_address"  required>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Store Phone:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="store_phone" id="store_phone" required>
+                              </div>
+                            </div>
+                             <div class="col-lg-6">
+                              <label>Open Hours SUN-THU:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="open_hours" id="open_hours" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Open Hours FRI-SAT:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="open_hours2" id="open_hours2" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-6">
+                              <label>Latitude:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="latitude" id="latitude" >
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <label>Langitude:</label>
+                              <div class="row">
+                                <input type="text" class="form-control col-md-11" name="longitude" id="longitude">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-lg-4 checkbox-inline">
+                              <label class="checkbox checkbox-primary">
+                                <input type="checkbox" name="active" id="active" value="1" checked>
+                                <span>
+                                </span>
+                                Aktif? 
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary mr-2" name="sbmtBttn" id="sbmtBttn">Submit</button>
+                          <a href="<?php echo site_url(); ?>Kabkot" class="btn btn-secondary font-weight-bolder">Cancel</a>
+                        </div>
+                        <!--end::Form-->
+                      </div>
+                      <!--end::Card-->
+
+                    </form>
+                  <?php
+                  } ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end::Wrapper-->
+        <?php include("includes/footer.php"); ?>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

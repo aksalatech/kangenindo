@@ -1,0 +1,15 @@
+
+#map {
+	height: 350px;
+	width: 100%;
+}
+
+.btket {
+	cursor: pointer;
+}
+
+.error {
+	color:red;
+	font-weight: bold;
+	display: none;
+}

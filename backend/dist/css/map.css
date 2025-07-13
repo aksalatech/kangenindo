@@ -1,0 +1,310 @@
+/* Stylesheet */
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	font-family: Calibri;
+}
+
+#map {
+	width: 100% !important;
+	left: 0px !important;
+	top : 0px !important;
+	height: 100% !important;
+}
+
+.claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
+	border: 0px !important;
+}
+
+.backdrop-curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.94);
+}
+
+.backdrop-light {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.72);
+  display: none;
+}
+
+.logo-bottom {
+	position: fixed;
+	z-index: 9999;
+	bottom:8px;
+	right:24%;
+	opacity: 0.65;
+}
+
+.logo-top {
+  position: fixed;
+  z-index: 9999;
+  top:136px;
+  right:24%;
+  opacity: 0.65;
+}
+
+#btnUpload {
+  width: 100%;
+  height: 32px;
+  font-weight: bold;
+}
+
+.control {
+  padding:6px;
+  width: 100%;
+  border-radius:6px;
+  border:thin solid #CECECE;
+}
+
+#PrintButton {
+	position: absolute;
+  top: 140px;
+  left: 20px;
+  z-index: 50;
+}
+
+#EraseButton {
+  position: absolute;
+  top: 185px;
+  left: 20px;
+  z-index: 50;
+}
+
+#MeasureButton {
+  position: absolute;
+  top: 230px;
+  left: 20px;
+  z-index: 50;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: calc(46% - 19px);
+  right: 8px;
+  z-index: 50;
+  cursor:pointer;
+  opacity: 0.85;
+}
+
+.toggle-alter-btn {
+  position: absolute;
+  top: calc(46% - 19px);
+  left: 5px;
+  z-index: 10000;
+  cursor:pointer;
+  opacity: 0.85;
+  display: none;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+.toggle-btn:hover,.toggle-alter-btn:hover {
+  opacity: 1;
+}
+
+.dnone {
+  display: none;
+}
+
+.Print, .Erase, .Ruler{
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    background-color: rgba(102,102,102,0.80);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Print {
+    background-image: url(images/print.png);
+}
+
+.Erase {
+    background-image: url(images/eraser.png);
+}
+
+.Ruler {
+    background-image: url(images/ruler.png);
+}
+
+#rightPane {
+	width: 22.6%;
+	z-index: 999;
+  transition: all 360ms;
+  -moz-transition: all 360ms;
+  -webkit-transition: all 360ms;
+  -o-transition: all 360ms;
+  -ms-transition: all 360ms;
+}
+
+#search {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 72px;
+	left: 74px;
+}
+
+#HomeButton {
+	left: 20px !important;
+}
+#legendPane {
+	border: solid #97DCF2 1px;
+}
+
+.claro .dijitSplitContainer-dijitContentPane, .claro .dijitBorderContainer-dijitContentPane {
+	padding:0px !important;
+}
+
+ul.map-setting li {
+	list-style: none;
+}
+
+ul.map-setting {
+	padding-left: 0px;
+  width:100%;
+}
+
+ul.map-setting .dijitButton, .dijitButtonNode{
+  width:auto;
+  display: block;
+}
+
+#HomeButton {
+	position: absolute;
+	top: 95px;
+	left: 27px;
+	z-index: 50;
+}
+
+/* Slider CSS */
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.toggle-btn  {
+    display: none;
+}
+
+#rightPane {
+  right: 5px;
+  left:auto !important;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  #rightPane {
+
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  #rightPane {
+    /*display: none;*/
+    left : 414px !important;
+    top : 0px !important;
+    bottom: 0px !important;
+    width: 366px !important;
+    height: 100% !important;
+    z-index: 9999;
+    transition: all 360ms;
+    -moz-transition: all 360ms;
+    -webkit-transition: all 360ms;
+    -o-transition: all 360ms;
+    -ms-transition: all 360ms;
+  }
+
+  #rightPane.active {
+    left : 48px !important;
+  }
+
+  #content {
+    z-index: 99;
+  }
+
+  .logo-top {
+    right:18px;
+  }
+
+  .logo-bottom {
+    right:10px;
+  }
+
+  .dijitAccordionContainer {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .dijitAccordionChildWrapper {
+    overflow-y: auto;
+    height:588px !important;
+  }
+
+  .dijitAccordionInnerContainer.dijitAccordionInnerContainerSelected.dijitSelected {
+    height:619px !important;
+  }
+
+  .toggle-btn  {
+    display: block;
+  }
+}
