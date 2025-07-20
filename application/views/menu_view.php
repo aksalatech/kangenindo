@@ -14,7 +14,7 @@
 		<?php include("include/include_css.php"); ?>
 
 	</head>
-	<body class="home_2">
+	<body class="home_2 page-menu">
 		<!-- header start-->
 		<?php include("include/header.php"); ?>
 		<!-- header end-->
@@ -22,7 +22,7 @@
 		<!--==========================
 			BREADCRUMB AREA START
 		===========================-->
-		<section class="breadcrumb_area" style="background: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->imageBanner; ?>);">
+		<section class="breadcrumb_area mt_120" style="background: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->imageBanner; ?>);">
 			<div class="container">
 				<div class="row wow fadeInUp">
 					<div class="col-12">
@@ -42,18 +42,10 @@
 		===========================-->
 		<section class="breakfast_menu mt_120 xs_mt_100">
 			<div class="container">
-				<div class="row wow fadeInUp">
-					<div class="col-xl-8 m-auto">
-						<div class="section_heading mb_25">
-							<!-- <h5>Menu Book</h5> -->
-							<h2>Our <?php echo $brands->brandNm ?> Menu</h2>
-						</div>
-					</div>
-				</div>
 				<div class="row" style="margin-bottom: 40px">
 					<div class="row mb_15 wow fadeInUp">
                         <div class="col-xxl-12 col-lg-12 m-auto">
-                            <ul class="filter_btn_area">
+                            <ul class="filter_btn_area menu_4_slider">
                             	<?php 
                             		$i = 0;
                             		foreach($categoryList as $category) : ?>
@@ -66,16 +58,19 @@
                     </div>
                     <div class="row">
 						<?php foreach($imageList as $menu) : ?>
-							<div class="col-xl-3 col-sm-6 col-lg-4 fadeInUp menuitem" data-cate="<?php echo $menu->id_category ?>">
+							<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem" data-cate="<?php echo $menu->id_category ?>">
 								<div class="single_menu">
 									<div class="single_menu_img">
-										<img src="<?php echo base_url(); ?>/images/catering/<?php echo $menu->imagepath; ?>" alt="<?php echo $menu->imagetitle; ?>" class="img-fluid w-100">
+										<img src="<?php echo base_url(); ?>images/catering/<?php echo $menu->imagepath; ?>" alt="<?php echo $menu->imagetitle; ?>" class="img-fluid w-100">
 									</div>
 									<div class="single_menu_text text-center">
-										<a class="title" href="javascript:void(0)"><?php echo $menu->imagetitle; ?><br>
+										<a class="title mt_20" href="javascript:void(0)"><?php echo $menu->imagetitle; ?><br>
 											<span><?php echo $menu->imagetitle2; ?></span>
 										</a>
 										<p class="descrption"><?php echo $menu->imagedesc; ?></p>
+										<a class="menu_order common_btn" href="<?php echo base_url(); ?>order?store=buy">
+											ORDER NOW
+										</a>
 									</div>
 								</div>
 							</div>

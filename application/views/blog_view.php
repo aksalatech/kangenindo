@@ -14,32 +14,38 @@
 		<?php include("include/include_css.php"); ?>
 
 	</head>
-	<body class="home_2 catering">
+	<body class="home_2 catering page-whatson">
 		<!-- header start-->
 		<?php include("include/header.php"); ?>
 		<!-- header end-->
 
-		<!--==================================
-			HOME 2 ADD BANNER AREA START
-		===================================-->
 		<!--==========================
         BREADCRUMB AREA START
-    ===========================-->
-    <section class="breadcrumb_area" style="background: url(<?php echo base_url();?>images/banner/banner-catering.png);">
-        <div class="container">
-            <div class="row wow fadeInUp">
-                <div class="col-12">
-                    <div class="breadcrumb_text">
-                        <h1>&nbsp;</h1>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==========================
-        BREADCRUMB AREA END
-    ===========================-->
+		===========================-->
+		<section class="breadcrumb_area" style="background: url(<?php echo base_url();?>images/banner/<?php echo $banner->imageBanner; ?>);">
+			<div class="container">
+				<div class="row wow fadeInUp">
+					<div class="col-12">
+						<div class="breadcrumb_text">
+							<h1><?php echo $banner->title; ?></h1>
+							<h5><?php echo $banner->subtitle; ?></h5>
+							<a class="common_btn" href="<?php echo $banner->link; ?>">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--==========================
+			BREADCRUMB AREA END
+		===========================-->
+
+		<section class="cta-location">
+			<div class="fluid-container">
+				<div class="row align-items-center justify-content-center">
+					<img class="img-divider" src="<?php echo base_url(); ?>images/divider.png" alt="">
+				</div>
+			</div>
+		</section>
 
 	 <!--==========================
         BLOGS START
@@ -54,20 +60,10 @@
 								<img src="<?php echo base_url(); ?>images/blog/<?php echo $blog->image; ?>" alt="blog" class="img-fluid w-100">
 							</a>
 							<div class="single_blog_2_text">
-								<ul>
-									<li>
-										<a href="#">Burger</a>
-									</li>
-									<li>
-										<span>
-											<img src="<?php echo base_url(); ?>images/calendar_2.svg" alt="calendar" class="img-fluid w-100">
-										</span>
-										<?php echo $blog->created_date; ?>
-									</li>
-								</ul>
 								<a class="title" href="<?php echo base_url(); ?>events/detail/<?php echo $blog->idblog; ?>"><?php echo $blog->title; ?></a>
-								<a class="read_btn" href="<?php echo base_url(); ?>events/detail/<?php echo $blog->idblog; ?>">Read More <i
-										class="far fa-arrow-right"></i></a>
+								<p class="subtitle"><?php echo substr(strip_tags($blog->blog_text), 0, 150) . '...'; ?></p>
+								<a class="common_btn" href="<?php echo base_url(); ?>events/detail/<?php echo $blog->idblog; ?>">Read More
+								</a>
 							</div>
 						</div>
 					</div>

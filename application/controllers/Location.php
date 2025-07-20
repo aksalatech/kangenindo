@@ -24,6 +24,7 @@ class Location extends CI_Controller
 		$this->load->model("category_model");
 		$this->load->model("banner_model");
 		$this->load->model("location_model");
+		$this->load->model("Banner_home_model");
 		
 		$imgList=array();
 		$img=array();
@@ -50,6 +51,7 @@ class Location extends CI_Controller
 		$data['banner'] = $bannerList; 
 		$data['contact'] = $contact;
 		$data['storeList'] = $this->location_model->get_all_store();
+		$data['bannerList'] = $this->Banner_home_model->get_banner_home();	
 		$data['storeLocation'] = $storeLocation;
 
 		$this->load->view("location_view",$data);

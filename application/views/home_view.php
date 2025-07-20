@@ -22,93 +22,88 @@
 		<!--==================================
 			HOME 2 ADD BANNER AREA START
 		===================================-->
-		<section class="home_2_add_banner_area mt_120 xs_mt_100 food_drinks">
+		<section class="home_2_add_banner_area xs_mt_100 food_drinks">
 			<div class="fluid-container">
 				<div class="banner_slider">
 					<?php foreach($sliderList as $slider) : ?>
-					<div class="row">
-						<img src="<?php echo base_url(); ?>images/banner/<?php echo $slider->imagepath; ?>">
-					</div>
+						<img src="<?php echo base_url(); ?>images/slider/<?php echo $slider->imagepath; ?>">
 					<?php endforeach ?>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-location">
+			<div class="fluid-container">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-md-3">
+						<img class="cta-location-icon" src="<?php echo base_url(); ?>images/cta-location.png" alt="">
+						<img class="logo-on-cta" src="<?php echo base_url(); ?>images/logo/logo_kangen_indo_white.png" alt="">
+					</div>
+					<div class="col-md-6 cta-location-content">
+						<h5>LOCATION</h5>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+					</div>
+					<div class="col-md-3 text-right">
+						<a href="#" class="btn cta-location-button">Find Us</a>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="home_2_add_banner_area food_drinks bintangbro popular_food_item">
 			<div class="fluid-container">
-				<?php 
-					$index=1;
-					foreach($bannerList as $banner) : 
-					$index++;
-					?>
+				<div class="row banner-home-row">
+					<?php foreach($bannerPromoList as $banner) : ?>
+					<div class="col-lg-6 " style="padding: 0; background-image: url(<?php echo base_url(); ?>images/promo/<?php echo $banner->image; ?>); background-size: cover;">
+						<a href="#" class="block_banner_home">
 
-					<?php if($index % 2 == 0){ ?>
-						<div class="row banner-home-row">
-							<div class="col-lg-6 block_banner_home_img" style="background-image: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->img_banner; ?>); background-size: cover;">
-
-							</div>
-							<div class="col-lg-6 block_banner_home">
-								<img src="<?php echo base_url(); ?>images/banner/<?php echo $banner->img_small; ?>" class="img_on_banner"><br>
-								<h2 class="color-title-banner"><?php echo $banner->title; ?></h2>
-								<p>
-									<?php echo nl2br($banner->content); ?>
-								</p>
-								<a class="see_btn" href="<?php echo $banner->link ?>">
-									MENU
-								</a>
-							</div>
-						</div>
-					<?php } else { ?>
-					
-						<div class="row banner-home-row">
-							<div class="col-lg-6 block_banner_home">
-								<img src="<?php echo base_url(); ?>images/banner/<?php echo $banner->img_small; ?>" class="img_on_banner"><br>
-								<h2 class="color-title-banner"><?php echo $banner->title; ?></h2>
-								<p>
-									<?php echo nl2br($banner->content); ?>
-								</p>
-								<a class="see_btn" href="<?php echo $banner->link ?>">
-									MENU
-								</a>
-							</div>
-							<div class="col-lg-6 block_banner_home_img" style="background-image: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->img_banner; ?>); background-size: cover;">
-
-							</div>
-						</div>
-					<?php } ?>
-				<?php endforeach ?>
-			</div>
-		</section>
-
-		<section class="home_2_add_banner_area mt_120 xs_mt_100 food_drinks">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 mx-auto">
-						<div class="section_heading mb_40">
-							<h1><?php echo $about->quote_text; ?></h1>
-						</div>
-						<div class="subtitle text-center">
-							<p><?php echo nl2br($about->simple_quote); ?>
-							</p>
-							<a class="menu_order common_btn" href="#">
-								Order Now
-							</a>
-						</div>
+						</a>
 					</div>
+					<?php endforeach ?>
 				</div>
 			</div>
 		</section>
 
-		<section class="home_2_add_banner_area mt_120 xs_mt_100 testimonial_2">
+		<section class="cta-location">
+			<div class="fluid-container">
+				<div class="row align-items-center justify-content-center">
+					<img class="img-divider" src="<?php echo base_url(); ?>images/divider.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="product-highlight pt_40 pb_40" style="background-image: url('<?php echo base_url(); ?>images/product_highlight.png')">
+			<div class="container">
+				<div class="row gallery_slider">
+					<?php foreach($recentProduct as $menu) : ?>
+						<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem" data-cate="<?php echo $menu->id_category ?>">
+							<div class="single_menu">
+								<div class="single_menu_img">
+									<img src="<?php echo base_url(); ?>/images/catering/<?php echo $menu->imagepath; ?>" alt="<?php echo $menu->imagetitle; ?>" class="img-fluid w-100">
+								</div>
+								<div class="single_menu_text text-center">
+									<a class="title" href="javascript:void(0)"><?php echo $menu->imagetitle; ?><br>
+										<span><?php echo $menu->imagetitle2; ?></span>
+									</a>
+									<p class="descrption"><?php echo $menu->imagedesc; ?></p>
+									<a class="menu_order common_btn" href="<?php echo base_url(); ?>order?store=buy">
+										ORDER NOW
+									</a>
+								</div>
+							</div>
+						</div>
+					<?php endforeach ?>
+				</div>
+			</div>
+		</section>
+
+		<section class="home_2_add_banner_area pt_100 xs_pt_100 testimonial_2">
 			<div class="container">
 				<div class="row mb_40">
-					<div class="col-lg-5 mx-auto">
+					<div class="col-lg-12 mx-auto">
 						<div class="section_heading">
-							<h2>What our happy customers says</h2>
+							<h4>What our happy customers says</h4>
 						</div>
-					</div>
-					<div class="col-lg-7">
-						<img src="<?php echo base_url(); ?>images/img-star-testimonial.png" class="img_on_banner">
 					</div>
 				</div>
 				<div class="row">
@@ -146,21 +141,6 @@
 			</div>
 		</section>
 
-		<section class="mt_100 xs_pb_100 mb_40">
-			<div class="container">
-				<div class="row">
-					<?php foreach($bannerPromoList as $bannerPromo) : ?>
-						<div class="col-xl-4 col-sm-6 col-lg-4 wow fadeInUp">
-							<div class="single_chef_2">
-								<div class="single_chef_2_img">
-									<img src="<?php echo base_url(); ?>images/banner/<?php echo $bannerPromo->image; ?>" class="img-fluid w-100">
-								</div>
-							</div>
-						</div>
-					<?php endforeach ?>
-				</div>
-			</div>
-		</section>
 		<!--==================================
 			HOME 2 ADD BANNER AREA END
 		===================================-->
@@ -171,3 +151,19 @@
 		<?php include("include/include_js.php"); ?>
     </body>
 </html>
+
+<script>
+	$('.banner_slider').on('init', function(event, slick){
+		$('.banner_slider .slick-dots li').each(function(index){
+			const number = (index + 1).toString().padStart(2, '0'); // tambahkan nol di depan
+			$(this).find('button').html(`<span class="dot-number">${number}</span>`);
+		});
+	});
+
+	$('.testimonial_2_slider').on('init', function(event, slick){
+		$('.testimonial_2_slider .slick-dots li').each(function(index){
+			const number = (index + 1).toString().padStart(2, '0'); // tambahkan nol di depan
+			$(this).find('button').html(`<span class="dot-number">${number}</span>`);
+		});
+	});
+</script>

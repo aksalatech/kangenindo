@@ -138,12 +138,12 @@ $(function () {
     $('.banner_slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         dots: true,
-        arrows: true,
-        nextArrow: '<i class="far fa-angle-right nextArrow"></i>',
-        prevArrow: '<i class="far fa-angle-left prevArrow"></i>',
+        arrows: false,
+        // nextArrow: '<i class="far fa-angle-right nextArrow"></i>',
+        // prevArrow: '<i class="far fa-angle-left prevArrow"></i>',
         responsive: [
 
             {
@@ -207,10 +207,10 @@ $(function () {
     $('.testimonial_2_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         dots: true,
-        arrows: true,
+        arrows: false,
         nextArrow: '<i class="far fa-arrow-right nextArrow"></i>',
         prevArrow: '<i class="far fa-arrow-left prevArrow"></i>',
         responsive: [
@@ -244,14 +244,14 @@ $(function () {
 
     //======menu item 4 slider======
     $('.menu_4_slider').slick({
-        slidesToShow: 1,
+        slidesToShow: 3.5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
         dots: false,
         arrows: true,
-        nextArrow: '<i class="far fa-angle-right nextArrow"></i>',
-        prevArrow: '<i class="far fa-angle-left prevArrow"></i>',
+        nextArrow: '<i class="fas fa-arrow-right nextArrow"></i>',
+        prevArrow: '<i class="fas fa-arrow-left prevArrow"></i>',
     });
 
 
@@ -268,13 +268,14 @@ $(function () {
 
     //======gallery slider======
     $('.gallery_slider').slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
         dots: false,
-        arrows: false,
-
+        arrows: true,
+        nextArrow: '<i class="fas fa-arrow-right nextArrow"></i>',
+        prevArrow: '<i class="fas fa-arrow-left prevArrow"></i>',
         responsive: [
             {
                 breakpoint: 1200,

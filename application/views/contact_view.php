@@ -22,13 +22,10 @@
 		<!--==========================
 			MENU STYLE 02 START
 		===========================-->
-		<section class="breakfast_menu mt_120 xs_mt_100">
-			<div class="container">
+		<section class="breakfast_menu mt_120 xs_mt_100 section-map-contact">
+			<div class="container-fluid ">
 				<div class="row wow fadeInUp">
-					<div class="col-xl-12 m-auto">
-						<div class="text-center mb_25">
-							<h1 class="title-h1-franchise">Contact Us</h1>
-						</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 m-auto">
 						<div class="contact_map">
 							<iframe
 							src="<?php echo $contact->location; ?>"
@@ -36,86 +33,81 @@
 							referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12 m-auto">
+						<h2 class="contact-title text-center">Your direct line with us</h2>
+						<div class="row">
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<div class="contact_info">
+									<div class="icon">
+										<img src="<?php echo base_url(); ?>images/contact_map.png" alt="location" class="img-fluid w-100">
+									</div>
+									<div class="text">
+										<h5>Position:</h5>
+										<p><?php echo $contact->address; ?></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<div class="contact_info">
+									<div class="icon">
+										<img src="<?php echo base_url(); ?>images/contact_hours.png" alt="call" class="img-fluid w-100">
+									</div>
+									<div class="text">
+										<h5>Open Hours:</h5>
+										<p><?php echo $contact->open_hours; ?></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<div class="contact_info">
+									<div class="icon">
+										<img src="<?php echo base_url(); ?>images/contact_phone.png" alt="call" class="img-fluid w-100">
+									</div>
+									<div class="text">
+										<h5>Contact:</h5>
+										<a href="callto:<?php echo $contact->mp1; ?>"><?php echo $contact->mp1; ?></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<div class="contact_info">
+									<div class="icon">
+										<img src="<?php echo base_url(); ?>images/contact_email.png" alt="mail" class="img-fluid w-100">
+									</div>
+									<div class="text">
+										<h5>Write us:</h5>
+										<a href="mailto:<?php echo $contact->email; ?>"><?php echo $contact->email; ?></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="faq_area pt_95 xs_pt_700">
+		<section class="breakfast_menu mt_120 xs_mt_100 section-contact-form mx-auto">
 			<div class="container">
-				<div class="row wow fadeInUp">
-					<div class="col-xl-6">
-						<div class="mb_25 text-left">
-							<h2 class="contact-title">LITTLE INDO TOWN</h2>
-						</div>
-					</div>
-					<div class="col-xl-6 m-auto">
-						<div class="contact_info">
-							<div class="icon">
-								<img src="<?php echo base_url(); ?>images/location_2.png" alt="location" class="img-fluid w-100">
-							</div>
-							<div class="text">
-								<p><?php echo $contact->address; ?></p>
-							</div>
-						</div>
-						<div class="contact_info">
-							<div class="icon">
-								<img src="<?php echo base_url(); ?>images/call_icon_3.png" alt="call" class="img-fluid w-100">
-							</div>
-							<div class="text">
-								<a href="callto:<?php echo $contact->mp1; ?>"><?php echo $contact->mp1; ?></a>
-							</div>
-						</div>
-						<div class="contact_info">
-							<div class="icon">
-								<img src="<?php echo base_url(); ?>images/mail_icon.png" alt="mail" class="img-fluid w-100">
-							</div>
-							<div class="text">
-								<a href="mailto:<?php echo $contact->email; ?>"><?php echo $contact->email; ?></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="breakfast_menu mt_120 xs_mt_100">
-			<div class="container">
-				<div class="row wow fadeInUp">
+				<div class="row wow fadeInUp box-contact-title mx-auto">
 					<div class="col-xl-12 m-auto">
-						<div class="text-center mb_25 row-contact-left">
-							<h1 class="title-h1-contact-left">GENERAL ENQUIRY FORM</h1>
-							<p class="subtitle-franchise">For any events related enquiries, please contact our <a href="#">events team</a>.</p>
+						<div class="text-center mb_25 row-contact-left" style="position: relative">
+							<img src="<?php echo base_url(); ?>images/contact_form1.png" alt="" class="img-contact-left">
+							<h1 class="title taste-logo mb_40"><span class="highlight">LETS TASTED</span> AND TALK</h1>
+							<p class="description-about text-center" style="font-size: 20px; font-weight: 400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+							<img src="<?php echo base_url(); ?>images/contact_form2.png" alt="" class="img-contact-right">
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<section class="breakfast_menu pt_20 pb_40 form-franchise">
-			<div class="container">
-				<form onsubmit="return submitContact()">
-					<div class="row wow fadeInUp mt_80">
+				<form class="form-contact mx-auto" onsubmit="return submitContact()">
+					<div class="row wow fadeInUp mt_40">
 						<div class="col-xl-6 m-auto">
-							<p>Name <span class="mandatory-color">*</span></p>
-							<input type="text" id="first_name" name="first_name" required class="form-control">
-						</div>
-						<div class="col-xl-6 m-auto">
-							<p>Choose Brand <span class="mandatory-color">*</span></p>
-							<select name="brand" id="brand" required class="form-control">
-								<option value="">Please Select</option>
-								<option value="Bintang Bro">Bintang Bro</option>
-								<option value="Urban Durian">Urban Durian</option>
-								<option value="Teguk">Teguk</option>
-							</select>
-						</div>
-						<!-- <div class="col-xl-6 m-auto">
 							<p>First Name <span class="mandatory-color">*</span></p>
 							<input type="text" id="first_name" name="first_name" required class="form-control">
 						</div>
 						<div class="col-xl-6 m-auto">
 							<p>Last Name <span class="mandatory-color">*</span></p>
-							<input type="text" id="last_name" name="last_name" required class="form-control">
-						</div> -->
+							<input type="text" id="first_name" name="first_name" required class="form-control">
+						</div>
 						<div class="col-xl-6 m-auto">
 							<p>Email <span class="mandatory-color">*</span></p>
 							<input type="email" id="email" required name="email" class="form-control">
@@ -124,49 +116,23 @@
 							<p>Phone Number <span class="mandatory-color">*</span></p>
 							<input type="text" id="phone" required name="phone" class="form-control">
 						</div>
-						<!-- <div class="col-xl-6 m-auto">
-							<p>State <span class="mandatory-color">*</span></p>
-							<input type="text" id="state" name="state" required class="form-control">
-						</div>
-						<div class="col-xl-6 m-auto">
-							<p>Post Code <span class="mandatory-color">*</span></p>
-							<input type="text" id="zip" name="zip" required class="form-control">
-						</div> -->
-						<div class="col-xl-12 m-auto">
-							<p>Enquiry Type <span class="mandatory-color">*</span></p>
-							<select class="form-control" id="enquiry" name="enquiry" required>
-								<option value="">Please Select</option>
-								<option value="Ask Question">Ask Question</option>
-								<option value="Send Feedback">Send Feedback</option>
-							</select>
-						</div>
+
 						<div class="col-xl-12 m-auto">
 							<p>Message</p>
 							<textarea name="message" id="message" cols="30" rows="5"></textarea>
 						</div>
 						<div class="col-xl-12">
-							<p>Check the boxes below to subscribe to Little Indo Town email updates — be the first to know and gain access to exclusive deals!</p>
-							<input class="checkbox-form chkbrand" type="checkbox" name="exclusive_brand" id="bintang_bro" value="Bintang Bro">
-							<label for="saving">Bintang Bro</label><br>
-							<input class="checkbox-form chkbrand" type="checkbox" name="exclusive_brand" id="urban_durian" value="Urban Durian">
-							<label for="Liquid Assets">Urban Durian</label><br>
-							<input class="checkbox-form chkbrand" type="checkbox" name="exclusive_brand" id="teguk" value="Teguk">
-							<label for="Bank Loan">Teguk</label><br>
-						</div>
-						<div class="col-xl-7" style="margin-top: 30px">
-							<p>
-								By submitting this form with the above boxes checked, you are consenting to receiving marketing communications from Little Indo Town. 
-								Little Indo Town  will only use your contact information to contact you about our products and services. You may unsubscribe from these 
-								communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, 
-								please review our Privacy Policy.
-							</p>
-						</div>
-						<div class="col-xl-12">
-							<button type="submit" id="btn-submit-contact" class="btn-submit" href="#" style="margin-left: 0">SUBMIT</a>
+							<button type="submit" id="btn-submit-contact" class="btn-submit" href="#" style="margin-left: 0">SEND</a>
 						</div>
 						
 					</div>
 				</form>
+			</div>
+		</section>
+
+		<section class="breakfast_menu pt_20 pb_40 form-franchise">
+			<div class="container">
+				
 			</div>
 		</section>
 

@@ -31,6 +31,8 @@ class About extends CI_Controller
 		$contact=$this->Contact_model->get_contact();
 		$storeLocation = $this->input->get("store");
 
+		$page = "about";
+
 		$data['error']=0;
 		$data['config']=$config; 
 		$data['about'] = $about;
@@ -39,6 +41,8 @@ class About extends CI_Controller
 		$data['imageList'] = $this->Image_about_model->get_image_about();
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['storeLocation'] = $storeLocation;
+		$bannerList = $this->banner_model->get_banner_page($page);
+		$data['banner'] = $bannerList; 
 
 		$this->load->view("about_view",$data);
 	}

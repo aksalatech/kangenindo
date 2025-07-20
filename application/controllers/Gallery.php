@@ -47,9 +47,7 @@ class Gallery extends CI_Controller
 		$data['config']=$config;
 		$data['fulluserList']=$this->user_model->get_full_user();
 		$data['categoryList'] = $this->category_model->get_category();
-		$data['galleryBintangbroList'] = $this->Image_gallery_model->get_image_gallery_by_category('bintangbro');
-		$data['galleryUrbandurianList'] = $this->Image_gallery_model->get_image_gallery_by_category('urbandurian');
-		$data['galleryTegukList'] = $this->Image_gallery_model->get_image_gallery_by_category('teguk');
+		$data['galleryList'] = $this->Image_gallery_model->get_image_gallery();
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['storeLocation'] = $storeLocation;
 

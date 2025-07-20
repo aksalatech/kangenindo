@@ -50,10 +50,9 @@ class Image_model extends CI_Model
 
 	function get_recent_image()
 	{
-		$query=$this->db->query("SELECT i.imageID, i.ID_category, i.imagePath, i.imageTitle, i.imageIndex, i.imageDesc, i.visible, COUNT(1) AS jml_detail  
-								FROM msimage AS i LEFT JOIN msimage_detail as d ON i.imageID = d.imageID
-								GROUP BY i.imageID, i.ID_category, i.imagePath,i.imageTitle,i.imageIndex,i.imageDesc,i.visible 
-								ORDER BY i.imageIndex DESC LIMIT 6");
+		$query=$this->db->query("SELECT *  
+								FROM msimage
+								ORDER BY imageIndex DESC LIMIT 6");
 		return $query->result();
 	}	
 	

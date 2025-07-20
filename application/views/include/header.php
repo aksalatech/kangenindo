@@ -1,17 +1,17 @@
 <!--==========================
     HEADER START
 ===========================-->
-<header>
+<!-- <header>
     <div class="container container_large">
         <div class="row">
             <div class="col-xl-12 col-md-12 d-none d-md-block">
                 <div class="header_left">
-                    <p><?php echo $contact->address; ?> | <?php echo $contact->open_hours; ?></p>
+                    <p><?php //echo $contact->address; ?> | <?php //echo $contact->open_hours; ?></p>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</header> -->
 <!--==========================
     HEADER END
 ===========================-->
@@ -31,14 +31,12 @@
             <i class="far fa-times close_icon"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
+            <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                <img src="<?php echo base_url(); ?>images/logo/<?php echo $config->logo_dark; ?>" class="img-fluid w-100">
+            </a>
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>">
-                        <img src="<?php echo base_url(); ?>images/logo/<?php echo $config->logo_dark; ?>" class="img-fluid w-100">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>">HOME</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>location">LOCATION</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)">MENU</a>
@@ -50,24 +48,22 @@
                         <?php } ?>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url(); ?>events">WHAT'S ON</a>
+                </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>catering">CATERING</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>about">ABOUT</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>gallery">GALLERY</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>events">WHAT'S ON</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>about">ABOUT US</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>contact">CONTACT US</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>franchise">FRANCHISE</a>
-                </li>
+                
                 <ul class="menu_right">
                         <!-- <li>
                             <a class="menu_order common_btn" href="<?php echo base_url(); ?>catering">

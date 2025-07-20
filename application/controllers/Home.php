@@ -30,6 +30,7 @@ class Home extends CI_Controller
 		$this->load->model("Testimoni_model");
 		$this->load->model("Brand_model");
 		
+		
 		$config=$this->Config_model->get_config();
 		$about=$this->About_model->get_about();
 		$contact=$this->Contact_model->get_contact();
@@ -44,13 +45,13 @@ class Home extends CI_Controller
 		$data['sliderList'] = $this->Slider_model->get_slider_image();
 		$data['blogHomeList'] = $this->Blog_model->get_recentblog();
 		$data['categoryList'] = $this->Category_model->get_category();
-		$data['galleryList'] = $this->Image_model->get_visible_image();
+		// $data['galleryList'] = $this->Image_model->get_visible_image();
 		$data['customerList'] = $this->Customer_model->get_customer();
-		$data['bannerList'] = $this->Banner_home_model->get_banner_home();	
 		$data['testimoniList'] = $this->Testimoni_model->get_testimoni();
 		$data['bannerPromoList'] = $this->Banner_promo_model->get_full_banner_promo();
 		$data['brandList'] = $this->Brand_model->get_active_brand();	
 		$data['storeLocation'] = $storeLocation;
+		$data['recentProduct']=$this->Image_model->get_recent_image();
 		
 
 		$this->load->view("home_view",$data);

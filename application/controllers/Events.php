@@ -26,6 +26,7 @@ class Events extends CI_Controller
 		$this->load->model("Blogcategory_model");
 		$this->load->model("Contact_model");
 		$this->load->model("Brand_model");
+		$this->load->model("banner_model");
 		
 		$config=$this->config_model->get_config();
 		$contact=$this->Contact_model->get_contact();
@@ -69,6 +70,7 @@ class Events extends CI_Controller
 		$paging['last_tagl_close']  = '';
 
 		$this->pagination->initialize($paging);
+		$page = "events";
 		$data['page'] = ($this->uri->segment(3) == null) ? 0 : $this->uri->segment(3); 
         $data['blogList'] = $this->Blog_model->get_blog($urikey, $paging["per_page"], $data["page"]);
 		$data['pagination'] = $this->pagination->create_links();
@@ -76,7 +78,8 @@ class Events extends CI_Controller
 		$data['categoryList'] = $this->Blogcategory_model->get_list_count_category();
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['contact'] = $contact;
-
+		$bannerList = $this->banner_model->get_banner_page($page);
+		$data['banner'] = $bannerList; 
 		
 		
 		$this->load->view("blog_view",$data);
