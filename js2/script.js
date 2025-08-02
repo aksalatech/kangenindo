@@ -252,6 +252,32 @@ $(function () {
         arrows: true,
         nextArrow: '<i class="fas fa-arrow-right nextArrow"></i>',
         prevArrow: '<i class="fas fa-arrow-left prevArrow"></i>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
 

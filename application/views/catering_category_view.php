@@ -47,34 +47,42 @@
     ===========================-->
     <section class="menu_grid_view mt_120 xs_mt_100 mb_70">
         <div class="container">
-            <div class="row">
-				<div class="col-xs-12 mb_70">
-					<h2>CATERING</h2>
-					
-					<section class="breakfast_menu pt_20 pb_40 form-franchise form-catering">
-						<div class="container">
-							<form onsubmit="return submitCatering()">
-								<div class="row wow fadeInUp mt_80">
-									<div class="col-xl-12 m-auto">
-										<p>Full Name <span class="mandatory-color">*</span></p>
-										<input type="text" id="full_name_cat" name="full_name" required class="form-control">
-									</div>
-									<div class="col-xl-12 m-auto">
-										<p>Email <span class="mandatory-color">*</span></p>
-										<input type="email" id="email_cat" name="email" required class="form-control">
-									</div>
-									<div class="col-xl-12 m-auto">
-										<p>Message <span class="mandatory-color">*</span></p>
-										<textarea name="message" id="message_cat" required cols="30" rows="5"></textarea>
-									</div>
-									<div class="col-xl-12">
-										<button type="submit" class="btn-submit" style="margin-left: 0">SUBMIT</button>
-									</div>
-									
+            <div class="row justify-content-center">
+				<div class="col-md-8 mb_70">
+					<!-- <h2>CATERING</h2> -->
+					<img src="<?php echo base_url(); ?>images/catering-title.png" alt="catering" class="" style="height: auto !important">
+					<p class="description-about text-center" style="font-size: 20px; font-weight: 400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<div class="section-contact-form">
+						<form class="form-contact mx-auto" onsubmit="return submitContact()">
+							<div class="row wow fadeInUp mt_40">
+								<div class="col-xl-6 m-auto">
+									<p>First Name <span class="mandatory-color">*</span></p>
+									<input type="text" id="first_name" name="first_name" required class="form-control">
 								</div>
-							</form>
-						</div>
-					</section>
+								<div class="col-xl-6 m-auto">
+									<p>Last Name <span class="mandatory-color">*</span></p>
+									<input type="text" id="first_name" name="first_name" required class="form-control">
+								</div>
+								<div class="col-xl-6 m-auto">
+									<p>Email <span class="mandatory-color">*</span></p>
+									<input type="email" id="email" required name="email" class="form-control">
+								</div>
+								<div class="col-xl-6 m-auto">
+									<p>Phone Number <span class="mandatory-color">*</span></p>
+									<input type="text" id="phone" required name="phone" class="form-control">
+								</div>
+
+								<div class="col-xl-12 m-auto">
+									<p>Message</p>
+									<textarea name="message" id="message" cols="30" rows="5"></textarea>
+								</div>
+								<div class="col-xl-12">
+									<button type="submit" id="btn-submit-contact" class="btn-submit" href="#" style="margin-left: 0">SEND</a>
+								</div>
+								
+							</div>
+						</form>
+					</div>
 				</div>
                 
             </div>

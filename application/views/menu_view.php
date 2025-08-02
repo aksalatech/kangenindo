@@ -22,7 +22,7 @@
 		<!--==========================
 			BREADCRUMB AREA START
 		===========================-->
-		<section class="breadcrumb_area mt_120" style="background: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->imageBanner; ?>);">
+		<section class="breadcrumb_area mt_120 xs_mt_100" style="background: url(<?php echo base_url(); ?>images/banner/<?php echo $banner->imageBanner; ?>);">
 			<div class="container">
 				<div class="row wow fadeInUp">
 					<div class="col-12">

@@ -62,8 +62,7 @@ class Image_model extends CI_Model
 									LEFT JOIN mscategory as c ON i.id_category  = c.id_category
 									WHERE i.visible=1 
 									GROUP BY i.imageid, i.id_category, i.imagepath,i.imagetitle,i.imageindex,i.imagedesc,i.visible,c.category_code,c.category_name 
-									ORDER BY i.imageindex ASC
-									LIMIT 7");
+									ORDER BY i.imageindex ASC");
 		return $query->result();
 	}
 

@@ -35,15 +35,17 @@
 		<section class="cta-location">
 			<div class="fluid-container">
 				<div class="row align-items-center justify-content-center">
-					<div class="col-md-3">
-						<img class="cta-location-icon" src="<?php echo base_url(); ?>images/cta-location.png" alt="">
-						<img class="logo-on-cta" src="<?php echo base_url(); ?>images/logo/logo_kangen_indo_white.png" alt="">
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="d-flex align-items-center justify-content-center">
+							<img class="cta-location-icon" src="<?php echo base_url(); ?>images/cta-location.png" alt="">
+							<img class="logo-on-cta" src="<?php echo base_url(); ?>images/logo/logo_kangen_indo_white.png" alt="">
+						</div>
 					</div>
-					<div class="col-md-6 cta-location-content">
+					<div class="col-md-6 col-sm-12col-xs-12 cta-location-content">
 						<h5>LOCATION</h5>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 					</div>
-					<div class="col-md-3 text-right">
+					<div class="col-md-3 col-sm-12 col-xs-12 text-right">
 						<a href="#" class="btn cta-location-button">Find Us</a>
 					</div>
 				</div>

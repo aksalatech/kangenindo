@@ -10746,149 +10746,6 @@ red {
     list-style: circle;
 }
 
-@media (max-width: 500px) {
-    .form-catering {
-        padding: 0;
-    }
-
-    .form-catering .mt_80 {
-        margin-top : 0 !important;
-    }
-
-    .main_menu {
-        top: 0;
-    }
-
-    .section_heading h1 {
-        font-size: 40px;
-        line-height: 40px;
-    }
-
-    .food_drinks .subtitle {
-        padding: 0;
-    }
-
-    .subtitle p {
-        font-size: 12px;
-        line-height: 12px;
-
-    }
-
-    header {
-        display: none;
-    }
-
-    .navbar-nav .navbar-brand {
-        display: none;
-    }
-
-    .food_drinks .col-lg-6.block_banner_home_img {
-        padding: 190px;
-    }
-
-    .food_drinks .col-lg-6.block_banner_home {
-        padding: 70px 40px;
-    }
-
-    .banner-home-row:nth-child(1) .block_banner_home, .banner-home-row:nth-child(3) .block_banner_home{
-        order: 1;
-    }
-
-    .banner-home-row:nth-child(1) .block_banner_home_img, .banner-home-row:nth-child(3) .block_banner_home_img{
-        order: 2;
-    }
-
-    .banner_slider .prevArrow, .testimonial_2_slider .prevArrow {
-        margin-left: 80px;
-    }
-
-    .testimonial_2 .nextArrow, .testimonial_2 .prevArrow {
-        right: 90px;
-    }
-
-    .row-img-about {
-        padding: 50px 0;
-    }
-
-    .row-img-about img {
-        margin-bottom: 50px;
-    }
-
-    .subtitle-franchise {
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .img_about_team {
-        padding: 0 20px;
-        display: block;
-    }
-
-    .img_about_team img {
-        margin-left: 0;
-        float: unset;
-    }
-
-    .img-wid-auto {
-        width: 100% !important;
-    }
-
-    .row-gallery-1 {
-        padding: 40px 20px;
-    }
-
-    .title-h1-contact-left:before, .title-h1-contact-left:after {
-        position: relative;
-    }
-
-    .title-h1-contact-left:before {
-        left: 0;
-    }
-
-    .title-h1-contact-left:after {
-        right: 0;
-    }
-
-    .title-h1-contact {
-        font-size: 60px;
-        line-height: 60px;
-    }
-
-    .form-promo .col-xl-5 {
-        margin: 10px 0;
-    }
-
-    .submit-regis {
-        width: 30%;
-    }
-
-    .btn_scan_now {
-        font-size: 30px;
-    }
-
-    .testimonial_2_slider .slick-slide.slick-active {
-        opacity: 1;
-    }
-
-    .popular_food_item .see_btn {
-        font-family: 'Sans Serif Varying-Black';
-        font-size: 26px;
-        line-height: 26px;
-        padding: 10px 30px;
-    }
-
-    .banner_slider .slick-dots li, .banner_slider .slick-dots li button {
-        width: 15px;
-        height: 15px;
-    }
-    
-    .banner_slider .slick-dots li button:before {
-        font-size: 40px;
-        width: 15px;
-        height: 15px;
-        opacity: 1;
-    }
-}
 
 .cta-location {
     background: #CD313E;
@@ -11097,6 +10954,10 @@ red {
     width: 70%;
 }
 
+.catering .section-contact-form .form-contact {
+    width: 100%;
+}
+
 .section-contact-form .form-contact p {
     font-family: unset;
     font-size: 20px;
@@ -11138,7 +10999,7 @@ red {
     top: -30px;
 }
 
-.page-menu .breadcrumb_area {
+.page-menu .breadcrumb_area, .catering .breadcrumb_area {
     height: 90vh;
 }
 
@@ -11156,4 +11017,279 @@ red {
 
 .menu_4_slider .prevArrow {
     left: -55px;
+}
+
+@media (max-width: 500px) {
+    .navbar-brand {
+        display: none;
+    }
+        
+    .menu_4_slider .nextArrow {
+        right: 0;
+    }
+
+    .menu_4_slider .prevArrow {
+        left: 0;
+    }
+
+    .page-menu .breadcrumb_area, .catering .breadcrumb_area {
+        height: unset;
+    }
+
+    .food_drinks .block_banner_home {
+        height: 250px;
+    }
+
+    .location-page .section_heading h2 {
+        font-size: 24px !important;
+        line-height: initial;
+    }
+
+    .home_2 .location-page .common_btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+    }
+
+    .box-store {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb_text h5 {
+        width: 100%;
+    }
+
+    .page-whatson .breadcrumb_area, .page-about .breadcrumb_area {
+        height: unset;
+    }
+
+    .breadcrumb_text {
+        margin-bottom: 20px;
+    }
+
+    .image-grid {
+        display: block;
+    }
+
+    .image-item {
+        margin-bottom: 20px;
+    }
+
+    .main_menu {
+        height: 100px;
+    }
+
+    .section-map-contact {
+        padding: 20px 10px;
+    }
+
+    .contact_map {
+        margin-bottom: 20px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .section-contact-form .box-contact-title {
+        width: 100%;
+    }
+
+    .title.taste-logo {
+        font-size: 36px;
+    }
+
+    .section-contact-form .form-contact {
+        width: 95%;
+    }
+
+    .img-contact-right {
+        width: 180px !important;
+        position: absolute;
+        right: -15px;
+        height: auto !important;
+        top: 90px;
+        z-index: -1;
+    }
+
+    .img-contact-left {
+        width: 120px !important;
+        position: absolute;
+        left: -30px;
+        height: auto !important;
+        top: -80px;
+        z-index: -1;
+    }
+
+    .title.taste-logo span {
+        font-size: 36px;
+    }
+
+    .form-search-loc {
+        padding: 15px 15px;
+        font-size: 14px;
+    }
+
+    .icon-on-location {
+        height: 28px !important;
+    }
+
+    .location-page {
+        padding: 10px;
+    }
+
+    .cta-location .row div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .gallery_slider .prevArrow {
+        left: 0;
+    }
+
+    .gallery_slider .nextArrow {
+        right: 0;
+    }
+
+    .form-catering {
+        padding: 0;
+    }
+
+    .form-catering .mt_80 {
+        margin-top : 0 !important;
+    }
+
+    .main_menu {
+        top: 0;
+    }
+
+    .section_heading h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .food_drinks .subtitle {
+        padding: 0;
+    }
+
+    .subtitle p {
+        font-size: 12px;
+        line-height: 12px;
+
+    }
+
+    header {
+        display: none;
+    }
+
+    .navbar-nav .navbar-brand {
+        display: none;
+    }
+
+    .food_drinks .col-lg-6.block_banner_home_img {
+        padding: 190px;
+    }
+
+    .food_drinks .col-lg-6.block_banner_home {
+        padding: 70px 40px;
+    }
+
+    .banner-home-row:nth-child(1) .block_banner_home, .banner-home-row:nth-child(3) .block_banner_home{
+        order: 1;
+    }
+
+    .banner-home-row:nth-child(1) .block_banner_home_img, .banner-home-row:nth-child(3) .block_banner_home_img{
+        order: 2;
+    }
+
+    .banner_slider .prevArrow, .testimonial_2_slider .prevArrow {
+        margin-left: 80px;
+    }
+
+    .testimonial_2 .nextArrow, .testimonial_2 .prevArrow {
+        right: 90px;
+    }
+
+    .row-img-about {
+        padding: 50px 0;
+    }
+
+    .row-img-about img {
+        margin-bottom: 50px;
+    }
+
+    .subtitle-franchise {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .img_about_team {
+        padding: 0 20px;
+        display: block;
+    }
+
+    .img_about_team img {
+        margin-left: 0;
+        float: unset;
+    }
+
+    .img-wid-auto {
+        width: 100% !important;
+    }
+
+    .row-gallery-1 {
+        padding: 40px 20px;
+    }
+
+    .title-h1-contact-left:before, .title-h1-contact-left:after {
+        position: relative;
+    }
+
+    .title-h1-contact-left:before {
+        left: 0;
+    }
+
+    .title-h1-contact-left:after {
+        right: 0;
+    }
+
+    .title-h1-contact {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .form-promo .col-xl-5 {
+        margin: 10px 0;
+    }
+
+    .submit-regis {
+        width: 30%;
+    }
+
+    .btn_scan_now {
+        font-size: 30px;
+    }
+
+    .testimonial_2_slider .slick-slide.slick-active {
+        opacity: 1;
+    }
+
+    .popular_food_item .see_btn {
+        font-family: 'Sans Serif Varying-Black';
+        font-size: 26px;
+        line-height: 26px;
+        padding: 10px 30px;
+    }
+
+    .banner_slider .slick-dots li, .banner_slider .slick-dots li button {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .banner_slider .slick-dots li button:before {
+        font-size: 40px;
+        width: 15px;
+        height: 15px;
+        opacity: 1;
+    }
 }

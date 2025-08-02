@@ -36,7 +36,7 @@
 								<li><i class="far fa-calendar-alt"></i><?php echo date("D, d M Y", strtotime($blog->created_date)) ; ?></li>
 							</ul>
 						</div>
-						<div class="blog_details_text">
+						<div class="blog_details_text mb_50">
 							<h2><?php echo $blog->title; ?></h2>
 							<p><?php echo $blog->subtitle; ?></p>
 							<br><br>

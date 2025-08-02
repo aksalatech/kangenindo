@@ -49,7 +49,8 @@
         <div class="container">
             <div class="row">
 				<div class="col-xs-12 mb_70">
-					<h2>CATERING</h2>
+					<!-- <h2>CATERING</h2> -->
+					<img src="<?php echo base_url(); ?>images/catering-title.png" alt="catering" class="img-fluid w-100">
 					
 				</div>
                 <div class="col-xl-3 col-lg-4 col-md-6 order-2 wow fadeInLeft">

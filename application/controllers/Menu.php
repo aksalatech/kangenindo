@@ -33,7 +33,7 @@ class Menu extends CI_Controller
 		$isLogin=$this->session->userdata("id");
 		$config=$this->config_model->get_config();
 		$storeLocation = $this->input->get("store");
-		$brand = $this->input->get("brand");
+		// $brand = $this->input->get("brand");
 		$contact=$this->contact_model->get_contact();
 		
 		if (!$isLogin)
@@ -44,13 +44,13 @@ class Menu extends CI_Controller
 		$data['error']=0;
 		$data['config']=$config;
 		$data['contact'] = $contact;
-		$data['brands'] = $this->Brand_model->get_one_brand($brand);
+		// $data['brands'] = $this->Brand_model->get_one_brand($brand);
 		$data['fulluserList']=$this->user_model->get_full_user();
 		$data['aboutList']=$this->about_model->get_about();
-		$imageList=$this->image_model->get_visible_image_brand($brand);
+		$imageList=$this->image_model->get_visible_image();
 		$bannerList = $this->banner_model->get_banner_page($page);
-		$data['fullimageList']=$this->image_model->get_full_image_by_brand($brand);
-		$data['categoryList'] = $this->category_model->get_category_by_brand($brand);
+		// $data['fullimageList']=$this->image_model->get_full_image_by_brand($brand);
+		$data['categoryList'] = $this->category_model->get_category();
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['imageList']=$imageList;
 		$data['banner'] = $bannerList;

@@ -39,14 +39,10 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>location">LOCATION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">MENU</a>
-                    <ul class="droap_menu">
-                        <?php foreach ($brandList as $b) { ?>
-                            <li>
-                                <a href="<?php echo $b->link ?>"><?php echo $b->brandNm ?></a>
-                            </li>
-                        <?php } ?>
-                    </ul>
+                    <a class="nav-link" href="<?php echo base_url(); ?>menu">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url(); ?>catering">CATERING</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>events">WHAT'S ON</a>
