@@ -37,6 +37,57 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $("#btn-subscribe").click(function(e) {
+            var email = $("#subscribe_email").val();
+            var regex = new RegExp("^[^\s@]+@[^\s@]+\.[^\s@]+$");
+            $("#error-subscribe").hide();
+            if (email == "") {
+                $("#error-subscribe").html("Fill your email first !");
+                $("#error-subscribe").show();
+            }
+            else if (email.length < 3) {
+                $("#error-subscribe").html("Your email is not valid !");
+                $("#error-subscribe").show();
+            }
+            else if (!regex.test(email)) {
+                $("#error-subscribe").html("Your email is not valid !");
+                $("#error-subscribe").show();
+            }
+            else {
+                $.ajax({
+                    url: base_url + "Promo/save_subscribe",
+                    type: "POST",
+                    dataType: "html",
+                    data: "email=" + email,
+                    success: function(result) {
+                        console.log(result);
+                        if (result != "") {
+                            $("#error-subscribe").html(result);
+                            $("#error-subscribe").show();
+                        } else {
+                            $("#subscribe_email").val("");
+                            $("#error-subscribe").html("Your email has been subscribed sucessfully !");
+                            $("#error-subscribe").show();
+                        } 
+                    },
+                    error: function(result) {
+                        console.log(result);
+                        alert("Error when submit subscription email !");
+                    }
+                });
+            }
+            window.setTimeout(function() { $("#error-subscribe").hide(); }, 3200);
+        });
+
+        $("body").on("click", ".btPickup", function(e) {
+            var html = $(this).attr("data-html");
+            $("#orderBody").html(html);
+            $("#orderModal").modal("show");
+        });
+    });
+</script>
 
 <script>
 

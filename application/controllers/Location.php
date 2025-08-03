@@ -14,7 +14,53 @@ class Location extends CI_Controller
 	{
 		return $this->db->escape(str_replace("'","`",str_replace('"',"\"",strip_tags(htmlspecialchars($x)))));
 	}
-	
+
+	function detail($id)
+	{
+		$this->load->model("user_model");
+		$this->load->model("config_model");		
+		$this->load->model("about_model");
+		$this->load->model("contact_model");
+		$this->load->model("category_model");
+		$this->load->model("banner_model");
+		$this->load->model("location_model");
+		$this->load->model("Brand_model");
+		$this->load->model("Banner_home_model");
+		
+		$imgList=array();
+		$img=array();
+		$page = "location";
+		
+		$uristore = $this->input->post("store");
+		
+		$isLogin=$this->session->userdata("id");
+		$config=$this->config_model->get_config();
+		$contact=$this->contact_model->get_contact();
+		$storeLocation = $this->input->get("store");
+
+
+		if (!$isLogin)
+			$data['id_admin'] = 0;
+		else
+			$data['id_admin'] = 2;
+		
+		$data['error']=0;
+		$data['config']=$config;
+		$data['fulluserList']=$this->user_model->get_full_user();
+		$data['categoryList'] = $this->category_model->get_category();
+		$bannerList = $this->banner_model->get_banner_page($page);
+		$data['banner'] = $bannerList; 
+		$data['bannerList'] = $this->Banner_home_model->get_banner_home();
+		$data['contact'] = $contact;
+		$data['brandList'] = $this->Brand_model->get_active_brand();
+		$data['storeLocation'] = $storeLocation;
+		$data['store'] = $this->location_model->get_one_store_by_id($id);
+		
+
+		$this->load->view("location_view",$data);
+	}
+
+
 	function index($admin=NULL)
 	{
 		$this->load->model("user_model");
@@ -24,7 +70,6 @@ class Location extends CI_Controller
 		$this->load->model("category_model");
 		$this->load->model("banner_model");
 		$this->load->model("location_model");
-		$this->load->model("Banner_home_model");
 		
 		$imgList=array();
 		$img=array();
@@ -51,10 +96,9 @@ class Location extends CI_Controller
 		$data['banner'] = $bannerList; 
 		$data['contact'] = $contact;
 		$data['storeList'] = $this->location_model->get_all_store();
-		$data['bannerList'] = $this->Banner_home_model->get_banner_home();	
 		$data['storeLocation'] = $storeLocation;
 
-		$this->load->view("location_view",$data);
+		$this->load->view("find_location_view",$data);
 	}
 
 	function update_official_store()

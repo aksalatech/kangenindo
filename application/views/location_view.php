@@ -51,80 +51,81 @@
 					<div class="col-md-6">
 						<div class="section_heading mb_25 text-left">
 							<!-- <h5>Menu Book</h5> -->
-							<h2>SELECT A KANGEN INDO RESTAURANT <span class="icon-on-location"><img src="<?php echo base_url(); ?>images/icon-on-location.png"></span></h2>
+							<h2>SELECT A <?php echo $config->title ?> RESTAURANT <span class="icon-on-location"><img src="<?php echo base_url(); ?>images/icon-on-location.png"></span></h2>
 							<h4 class="subtitle-location">Find all restaurant opening hours PLUS you can place your order for restaurant pick up or delivery.</h4>
 						</div>
 						<div class="row">
-							<div class="col-md-6 text-center">
-								<a class="common_btn" href="javascript:void(0)" id="btCurrentLocation">
-								USE CURRENT LOCATION
-								<span class="icon">
+							<div class="col-md-7 text-center">
+							</div>
+							<div class="col-md-5 text-center">
+								<a class="common_btn" href="<?php echo base_url() ?>location">
+								OTHER LOCATIONS
+									<span class="icon">
 										<img src="<?php echo base_url();?>images/location-icon.png"class="img-fluid w-100">
 									</span>
 								</a>
 							</div>
-							<div class="col-md-6 text-center contact_form">
+							
+							<!-- <div class="col-md-6 text-center contact_form">
 								<input type="text" id="autocomplete" class="form-search-loc" placeholder="POST CODE OR SUBURB/TOWN">
-							</div>
+							</div> -->
 						</div>
 
 						<div class="box-store">
-							<?php foreach($storeList as $store) : ?>
-								<div class="storeDiv">
-									<div class="row mb_50">
-										<div class="col-md-6">
-											<div class="d-flex gap-3">
-												<img class="pin-store" src="<?php echo base_url(); ?>images/location.png">
-												<div class="title-store">
-													<h5 class=""><?php echo $store->store_name; ?></h5>
-													<div class="clear"></div>
-													<p>
-														<?php echo $store->store_address; ?>
-													</p>
-												</div>
-											</div>
-											<div class="d-flex gap-3">
-												<img class="pin-store" src="<?php echo base_url(); ?>images/phone.png">
-												<div class="title-store">
-													<h5 class=""><?php echo $store->store_phone; ?></h5>
-												</div>
+							<div class="storeDiv">
+								<div class="row mb_50">
+									<div class="col-md-6">
+										<div class="d-flex gap-3">
+											<img class="pin-store" src="<?php echo base_url(); ?>images/location.png">
+											<div class="title-store">
+												<h5 class=""><?php echo $store->store_name; ?></h5>
+												<div class="clear"></div>
+												<p>
+													<?php echo $store->store_address; ?>
+												</p>
 											</div>
 										</div>
-										<div class="col-md-6">
-											<div class="d-flex gap-3">
-												<img class="pin-store" src="<?php echo base_url(); ?>images/hours.png">
-												<div class="title-store">
-													<h5 class="">Open Hours</h5>
-													<div class="clear"></div>
-													<p>
-														DINE IN
-													</p>
-													<table class="table-hours">
-														<tr>
-															<td>Mon - Wed</td>
-															<td><?php echo $store->open_hours; ?></td>
-														</tr>
-														<tr>
-															<td>Thu - Sat</td>
-															<td><?php echo $store->open_hours2; ?></td>
-														</tr>
-														<tr>
-															<td>Sun</td>
-															<td><?php echo $store->open_hours2; ?></td>
-														</tr>
-													</table>
-												</div>
+										<div class="d-flex gap-3">
+											<img class="pin-store" src="<?php echo base_url(); ?>images/phone.png">
+											<div class="title-store">
+												<h5 class=""><?php echo $store->store_phone; ?></h5>
 											</div>
 										</div>
 									</div>
-									<a href="#" class="btn common_btn">DIRECTION</a>
+									<div class="col-md-6">
+										<div class="d-flex gap-3">
+											<img class="pin-store" src="<?php echo base_url(); ?>images/hours.png">
+											<div class="title-store">
+												<h5 class="">Open Hours</h5>
+												<div class="clear"></div>
+												<p>
+													DINE IN
+												</p>
+												<table class="table-hours">
+													<tr>
+														<td>Mon - Wed</td>
+														<td><?php echo $store->open_hours; ?></td>
+													</tr>
+													<tr>
+														<td>Thu - Sat</td>
+														<td><?php echo $store->open_hours2; ?></td>
+													</tr>
+													<tr>
+														<td>Sun</td>
+														<td><?php echo $store->open_hours2; ?></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
 								</div>
+								<a href="#" class="btn common_btn">DIRECTION</a>
+							</div>
 							
-							<?php endforeach ?>
 						</div>
 					</div>
 					<div class="col-md-6">
-					<iframe style="border-radius: 25px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5127467467287!2d151.20170957531073!3d-33.87644611945419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12af007a773333%3A0x458760571fd1cdb3!2sKangen%20Indo%20store!5e0!3m2!1sid!2sid!4v1752853220486!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe style="border-radius: 25px" src="<?php echo $store->embedMaps; ?>" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div>
 			</div>
@@ -134,6 +135,20 @@
 			<div class="container">
 				<div class="row gallery_slider">
 					<?php foreach($bannerList as $menu) : ?>
+						<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem">
+							<div class="single_menu">
+								<div class="single_menu_img">
+									<img src="<?php echo base_url(); ?>images/banner/<?php echo $menu->img_banner; ?>" alt="<?php echo $menu->title; ?>" class="img-fluid w-100">
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem">
+							<div class="single_menu">
+								<div class="single_menu_img">
+									<img src="<?php echo base_url(); ?>images/banner/<?php echo $menu->img_banner; ?>" alt="<?php echo $menu->title; ?>" class="img-fluid w-100">
+								</div>
+							</div>
+						</div>
 						<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem">
 							<div class="single_menu">
 								<div class="single_menu_img">
@@ -156,5 +171,14 @@
 		<?php include("include/include_js.php"); ?>
     </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$("body").on("click",".btGetDirection", function(e) {
+			var lat = $(this).attr("data-lat");
+			var lng = $(this).attr("data-lang");
+			window.open("https://maps.google.com/maps?saddr=%28" + tempLat + "%2C%20" + tempLng + "%29&daddr=" + lat + "%2C%20" + lng);
+		});
+	});
+</script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4lhzQw0y2D8qM-5axyxmBa6XTq6ce9XM&callback=initMap&libraries=places" defer></script> -->
 <!-- <script type="text/javascript" src="<?php echo base_url(); ?>js2/map.js"></script> -->

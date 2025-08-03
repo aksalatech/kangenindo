@@ -44,9 +44,9 @@
             </div>
             <div class="col-lg-4 col-md-9">
                 <div class="footer_post">
-                    <h2>MAILING LIST</h2>
+                    <h2 style="color:#fff">MAILING LIST</h2>
                     <input type="text" placeholder="ENTER YOUR EMAIL HERE" autocomplete="off" id="subscribe_email" style="margin-bottom: 0px" required>
-                    <red id="error-subscribe"></red>
+                    <white id="error-subscribe"></white>
                     <button class="btn_subscribe" id="btn-subscribe" style="margin-top: 15px">SUBSCRIBE</button>
                 </div>
             </div>

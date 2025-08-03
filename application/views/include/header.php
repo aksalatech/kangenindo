@@ -36,7 +36,45 @@
             </a>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>location">LOCATION</a>
+                    <?php
+                    $CI =& get_instance();
+                    $CI->load->model('Location_model');
+                    $regions = $CI->Location_model->get_all_regions();
+                    ?>
+                    <a class="nav-link" href="javascript:void(0)">LOCATION</a>
+                    <ul class="droap_menu menu2 d-sm-none">
+                        <?php foreach ($regions as $r) { ?>
+                            <li class="header">
+                                <a href="javascript:void(0)"><?php echo $r->store_region ?></a>
+                            </li>
+                            <?php 
+                            $stores = $CI->Location_model->get_all_store_by_region($r->store_region);
+                            foreach ($stores as $s) { ?>
+                                <li class="link">
+                                    <a href="<?php echo base_url(); ?>location/detail/<?php echo $s->id_store; ?>"><b><?php echo $s->store_name ?></b></a>
+                                </li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
+                    <ul class="droap_menu disabled menu3 d-none d-sm-block">
+                        <li>
+                            <?php foreach ($regions as $r) { ?>
+                            <ul class="pull-left droap_menu_new" style="width:280px; margin-right: 40px">
+                                <li class="header">
+                                    <a href="javascript:void(0)"><?php echo $r->store_region ?></a>
+                                </li>
+                                <?php 
+                                $stores = $CI->Location_model->get_all_store_by_region($r->store_region);
+                                foreach ($stores as $s) { ?>
+                                    <li class="link">
+                                        <a href="<?php echo base_url(); ?>location/detail/<?php echo $s->id_store; ?>"><b><?php echo $s->store_name ?></b></a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                            <?php } ?>
+                        </li>
+                        
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>menu">MENU</a>
