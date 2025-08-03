@@ -298,10 +298,10 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        dots: false,
-        arrows: true,
-        nextArrow: '<i class="fas fa-arrow-right nextArrow"></i>',
-        prevArrow: '<i class="fas fa-arrow-left prevArrow"></i>',
+        dots: true,
+        arrows: false,
+        // nextArrow: '<i class="fas fa-arrow-right nextArrow"></i>',
+        // prevArrow: '<i class="fas fa-arrow-left prevArrow"></i>',
         responsive: [
             {
                 breakpoint: 1200,

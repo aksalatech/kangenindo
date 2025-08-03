@@ -107,6 +107,7 @@ class Events extends CI_Controller
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['banner'] = $bannerList; 
 		$data['storeLocation'] = $storeLocation;
+		$data['eventList'] = $this->Blog_model->get_recentblog();
 
 		$this->load->view("blog_detail_view",$data);
 	}

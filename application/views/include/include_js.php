@@ -222,7 +222,15 @@ function ordermenu(id) {
             if (data) {
                 tempPrice = data.price;
                 tempData = data;
-                var options = $.parseJSON(data.optionTxt);
+                var options = [];
+                if (data.optionTxt && data.optionTxt.trim() !== "") {
+                    try {
+                        options = $.parseJSON(data.optionTxt);
+                    } catch (e) {
+                        options = [];
+                        console.error("optionTxt JSON parse error:", e);
+                    }
+                }
                 var detailElmt = "";
                 if (options != null) {
                     for(var i=0;i<options.length;i++) {

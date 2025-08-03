@@ -49,14 +49,19 @@
 		<!--==========================
 			MENU STYLE 02 START
 		===========================-->
-		<section class="breakfast_menu mt_120 xs_mt_150">
+		<section class="breakfast_menu mt_120 xs_mt_150 mb_100">
 			<div class="container">
 				<div class="row wow fadeInUp">
 					<div class="col-xl-12 m-auto">
 						<div class="text-center mb_25">
 							<h1 class="title taste-logo mb_100"><span class="highlight"><?php echo $about->quote_text; ?></span> <?php echo $about->quote_text2; ?></h1>
-							<p class="description-about"><?php echo nl2br($about->simple_quote2); ?></p>
 						</div>
+					</div>
+					<div class="col-xl-6 m-auto">
+						<p class="description-about"><?php echo nl2br($about->simple_quote); ?></p>
+					</div>
+					<div class="col-xl-6 m-auto">
+						<p class="description-about"><?php echo nl2br($about->simple_quote2); ?></p>
 					</div>
 				</div>
 			</div>

@@ -13,6 +13,12 @@
 
 		<?php include("include/include_css.php"); ?>
 
+		<!-- Fancybox CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+		<!-- Fancybox JS -->
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 	</head>
 	<body class="home_2">
 		<!-- header start-->
@@ -31,24 +37,14 @@
 		</section>
 
 		<section class="breakfast_menu pt_50 pb_50">
-			<!-- <div class="container">
-				<div class="row g-2">
-					<?php foreach ($galleryList as $index => $img): ?>
-					<div class="<?php echo ($index === 0 || $index === 3 || $index === 4) ? 'col-lg-6' : 'col-6 col-lg-3'; ?>">
-						<div class="image-box">
-						<img src="<?php echo base_url('images/gallery/' . $img->img_name); ?>" class="img-fluid img-cover" alt="Image <?php echo $index + 1; ?>">
-						</div>
-					</div>
-					<?php endforeach; ?>
-				</div>
-			</div> -->
-
 			<div class="container">
 				<div class="image-grid">
 					<?php foreach ($galleryList as $index => $img): ?>
-					<div class="image-item image-item-<?php echo $index + 1; ?>">
-						<img src="<?php echo base_url('images/gallery/' . $img->img_name); ?>" alt="Image <?php echo $index + 1; ?>">
-					</div>
+						<div class="image-item image-item-<?php echo $index + 1; ?>">
+							<a data-fancybox="gallery" href="<?php echo base_url('images/gallery/' . $img->img_name); ?>">
+								<img src="<?php echo base_url('images/gallery/' . $img->img_name); ?>" alt="Image <?php echo $index + 1; ?>">
+							</a>
+						</div>
 					<?php endforeach; ?>
 				</div>
 			</div>
@@ -63,3 +59,6 @@
 		<?php include("include/include_js.php"); ?>
     </body>
 </html>
+<script>
+    Fancybox.bind('[data-fancybox="gallery"]', {});
+</script>

@@ -68,9 +68,10 @@
 											<span><?php echo $menu->imagetitle2; ?></span>
 										</a>
 										<p class="descrption"><?php echo $menu->imagedesc; ?></p>
-										<a class="menu_order common_btn" href="<?php echo base_url(); ?>order?store=buy">
+										<!-- <a class="menu_order common_btn" href="<?php echo base_url(); ?>order?store=buy">
 											ORDER NOW
-										</a>
+										</a> -->
+										<a class="menu_order common_btn" href="javascript:void(0)" onclick="ordermenu(<?php echo $menu->imageid; ?>)">Order Now</a>
 									</div>
 								</div>
 							</div>

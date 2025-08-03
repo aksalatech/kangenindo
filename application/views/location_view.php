@@ -131,8 +131,8 @@
 			</div>
 		</section>
 
-		<section class="product-highlight pt_40 pb_40 location-page">
-			<div class="container">
+		<section class="product-highlight pt_40 pb_40 location-page mb_100">
+			<div class="container-fluid">
 				<div class="row gallery_slider">
 					<?php foreach($bannerList as $menu) : ?>
 						<div class="col-xl-4 col-sm-6 col-lg-4 fadeInUp menuitem">
@@ -177,6 +177,13 @@
 			var lat = $(this).attr("data-lat");
 			var lng = $(this).attr("data-lang");
 			window.open("https://maps.google.com/maps?saddr=%28" + tempLat + "%2C%20" + tempLng + "%29&daddr=" + lat + "%2C%20" + lng);
+		});
+	});
+
+	$('.gallery_slider').on('init', function(event, slick){
+		$('.gallery_slider .slick-dots li').each(function(index){
+			const number = (index + 1).toString().padStart(2, '0'); // tambahkan nol di depan
+			$(this).find('button').html(`<span class="dot-number">${number}</span>`);
 		});
 	});
 </script>
