@@ -50,7 +50,7 @@ class Location extends CI_Controller
 		$data['categoryList'] = $this->category_model->get_category();
 		$bannerList = $this->banner_model->get_banner_page($page);
 		$data['banner'] = $bannerList; 
-		$data['bannerList'] = $this->Banner_home_model->get_banner_home();
+		$data['bannerList'] = $this->Banner_home_model->get_banner_home_store($id);
 		$data['contact'] = $contact;
 		$data['brandList'] = $this->Brand_model->get_active_brand();
 		$data['storeLocation'] = $storeLocation;

@@ -12,4 +12,10 @@ class Banner_home_model extends CI_Model
 		return $query->result();
 	}
 
+	function get_banner_home_store($id_store)
+	{
+		$query=$this->db->query("SELECT * FROM msbanner_home WHERE id_store = ".$this->db->escape($id_store)." AND active = 1");
+		return $query->result();
+	}
+
 }
